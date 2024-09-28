@@ -1,6 +1,12 @@
-/**
- * The entrypoint for the action.
- */
-const { run } = require('./main')
+const core = require('@actions/core')
+const io = require('@actions/io')
 
-run()
+const getTime = core.getInput('milliseconds')
+
+core.log('Input is $milliseconds')
+
+async function build(params) {
+  await io.mkdirP(`/tmp/abc`)
+}
+
+build()
