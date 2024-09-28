@@ -3352,7 +3352,7 @@ const io = __nccwpck_require__(436)
 
 const getTime = core.getInput('milliseconds')
 
-core.log('Input is $milliseconds')
+console.log('Input is $milliseconds')
 
 async function build(params) {
   await io.mkdirP(`/tmp/abc`)
